@@ -21,10 +21,10 @@ directories = {
 
 @logger_to('test1.json')
 def show_list(doc_list, dir_dict):
+    res = []
     for info_doc in doc_list:
-        res = f'{info_doc["type"]} "{info_doc["number"]}" "{info_doc["name"]}"'
+        res.append(f'{info_doc["type"]} "{info_doc["number"]}" "{info_doc["name"]}"')
     res2 = dir_dict
-
     return res, res2
 
 

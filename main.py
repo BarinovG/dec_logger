@@ -28,6 +28,20 @@ def show_list(doc_list, dir_dict):
     return res, res2
 
 
+@logger_to('test.json')
+def summator(x, y):
+    return x + y
+
+
 if __name__ == '__main__':
     iqwe(3, 4, 2)
     show_list(documents, directories)
+
+    # Тесты от Кирилла Т. ! fixed
+    three = summator(1, 2)
+    five = summator(2, 3)
+
+    result = summator(three, five)
+
+    print('result: ', result)
+    print('result type: ', type(result))

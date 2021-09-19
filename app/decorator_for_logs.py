@@ -25,6 +25,8 @@ def logger_to(file_path):
             with open(file_path, 'a', encoding='utf-8') as f:
                 json.dump(data, f, indent=4, ensure_ascii=False, default=str)
 
+            return result
+
         return wrapper
 
     return logger
